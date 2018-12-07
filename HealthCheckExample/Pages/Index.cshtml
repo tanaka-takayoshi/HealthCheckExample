@@ -1,0 +1,23 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="row">
+    <div class="col-lg-3">
+        <form asp-page-handler="liveness" method="post">
+            <button class="btn btn-default">Set Liveness unhealthy</button>
+        </form>
+    </div>
+    <div class="col-lg-3">
+        <form asp-page-handler="readiness" method="post">
+            <button class="btn btn-default">Set Readiness unhealthy</button>
+        </form>
+    </div>
+</div>
